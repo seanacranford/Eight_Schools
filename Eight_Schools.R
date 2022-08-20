@@ -10,6 +10,7 @@ schools_data <- list(
 
 library(rstan)
 options(mc.cores=parallel::detectCores())
+rstan_options(auto_write = TRUE)
 
 fit1 <- stan(
   file = "schools.stan",  # Stan program
